@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact form</title>
+    <link rel="stylesheet" type="text/css" href="feedback_style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
+  </head>
+  <body>
+   <form id="form"> 
+    <div class="container">
+      <div class="contact-box">
+        
+        <div class="right">
+          <h2 id="feedback">Reach Us</h2>
+          <div>
+            <span id="alert" style="text-align: center;display:flex;justify-content:center;color: blue;"></span>
+    
+          </div>
+          <input type="text" class="field" placeholder="Your Name" id="name" />
+          <input type="text" class="field" placeholder="Your Email" id="email" />
+          <input type="text" class="field" placeholder="Phone" />
+          <textarea placeholder="Message" class="field" id="message"></textarea>
+          <button class="upload">Send</button>
+        </div>
+      </div>
+      
+    </div>
+
+    <script>
+      var form = document.getElementById("form");
+
+      form.addEventListener('submit', function(e){ 
+        e.preventDefault();
+         var alert = document.getElementById("alert");
+         alert.innerHTML="Your message has been deliver successfully";
+      })
+    </script>
+  </body>
+</html>
